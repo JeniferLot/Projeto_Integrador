@@ -1,0 +1,400 @@
+/* ==========================
+   CONFIGURAÇÕES GERAIS
+========================== */
+
+:root{
+    --cor-fundo:#ffffff;
+    --cor-texto:#000000;
+    --cor-titulo:#0057d9;
+    --cor-header:#0b4ea2;
+    --cor-header-texto:#ffffff;
+    --cor-botao:#0057d9;
+    --cor-botao-hover:#003f99;
+    --cor-footer:#f2f2f2;
+    --cor-destaque:#fff176;
+    --sombra:0 5px 15px rgba(0,0,0,.15);
+}
+
+.dark{
+
+    --cor-fundo:#000000;
+    --cor-texto:#ffffff;
+    --cor-titulo:#ffe600;
+    --cor-header:#111111;
+    --cor-header-texto:#ffffff;
+    --cor-botao:#ffe600;
+    --cor-botao-hover:#ffd000;
+    --cor-footer:#111111;
+    --cor-destaque:#2c7fff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:"Poppins",sans-serif;
+    background:var(--cor-fundo);
+    color:var(--cor-texto);
+    transition:.4s;
+    line-height:1.8;
+}
+
+/* ==========================
+      CABEÇALHO
+========================== */
+
+header{
+
+    position:sticky;
+    top:0;
+    z-index:999;
+
+    background:var(--cor-header);
+
+    color:var(--cor-header-texto);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 40px;
+
+    box-shadow:var(--sombra);
+}
+
+.logo h1{
+
+    font-size:28px;
+}
+
+nav{
+
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+nav a{
+
+    text-decoration:none;
+}
+
+nav button{
+
+    border:none;
+    cursor:pointer;
+
+    padding:12px 18px;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    background:white;
+
+    transition:.3s;
+}
+
+.dark nav button{
+
+    background:#222;
+    color:white;
+}
+
+nav button:hover{
+
+    transform:translateY(-2px);
+
+    background:#ddd;
+}
+
+.dark nav button:hover{
+
+    background:#333;
+}
+
+/* ==========================
+      LEITOR
+========================== */
+
+.leitor{
+
+    text-align:center;
+
+    padding:40px;
+}
+
+.leitor h2{
+
+    color:var(--cor-titulo);
+
+    margin-bottom:20px;
+}
+
+.botoes{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+}
+
+.botoes button{
+
+    background:var(--cor-botao);
+
+    color:white;
+
+    border:none;
+
+    padding:14px 22px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:16px;
+
+    font-weight:bold;
+}
+
+.dark .botoes button{
+
+    color:black;
+}
+
+.botoes button:hover{
+
+    transform:scale(1.05);
+
+    background:var(--cor-botao-hover);
+}
+
+/* ==========================
+       CONTEÚDO
+========================== */
+
+main{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:40px;
+}
+
+section{
+
+    margin-bottom:70px;
+}
+
+h2{
+
+    color:var(--cor-titulo);
+
+    font-size:36px;
+
+    margin-bottom:20px;
+}
+
+h3{
+
+    color:var(--cor-titulo);
+
+    margin-top:35px;
+
+    margin-bottom:15px;
+
+    font-size:25px;
+}
+
+.texto{
+
+    font-size:20px;
+
+    margin-bottom:18px;
+
+    text-align:justify;
+}
+
+/* ==========================
+      DESTAQUE DA LEITURA
+========================== */
+
+.lendo{
+
+    background:var(--cor-destaque);
+
+    color:black;
+
+    padding:8px;
+
+    border-radius:8px;
+
+    transition:.3s;
+}
+
+/* ==========================
+         FOOTER
+========================== */
+
+footer{
+
+    background:var(--cor-footer);
+
+    text-align:center;
+
+    padding:50px 20px;
+
+    border-top:4px solid var(--cor-header);
+}
+
+footer h2{
+
+    margin-bottom:20px;
+}
+
+footer p{
+
+    margin:8px 0;
+
+    font-size:18px;
+}
+
+/* ==========================
+      ANIMAÇÕES
+========================== */
+
+section{
+
+    animation:subir .8s ease;
+}
+
+@keyframes subir{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+}
+
+/* ==========================
+      ACESSIBILIDADE
+========================== */
+
+button:focus,
+a:focus{
+
+    outline:4px solid orange;
+
+    outline-offset:4px;
+}
+
+/* ==========================
+      RESPONSIVIDADE
+========================== */
+
+@media(max-width:900px){
+
+header{
+
+    flex-direction:column;
+
+    gap:20px;
+}
+
+.logo h1{
+
+    text-align:center;
+
+    font-size:25px;
+}
+
+nav{
+
+    justify-content:center;
+}
+
+main{
+
+    padding:20px;
+}
+
+h2{
+
+    font-size:30px;
+}
+
+h3{
+
+    font-size:22px;
+}
+
+.texto{
+
+    font-size:18px;
+}
+
+}
+
+@media(max-width:600px){
+
+nav button{
+
+    width:100%;
+}
+
+.botoes{
+
+    flex-direction:column;
+}
+
+.botoes button{
+
+    width:100%;
+}
+
+h2{
+
+    font-size:26px;
+}
+
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+
+.logo-escola{
+
+    width:100px;
+    height:auto;
+
+}
