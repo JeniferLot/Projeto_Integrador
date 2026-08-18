@@ -1590,3 +1590,20 @@ footer h2 {
     }
 
 }
+
+.alerta-seguranca h1 {
+    color: #B91C1C;
+}
+
+.alerta-seguranca .texto-intro {
+    background: #FEF2F2;
+    border-left: 4px solid #DC2626;
+}
+
+.alerta-seguranca h2 {
+    color: #DC2626;
+}
+
+.alerta-seguranca .dica {
+    background: #FFF1F2;
+}
